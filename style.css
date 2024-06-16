@@ -1,0 +1,115 @@
+
+:root{
+
+    --scale: 1;
+    
+
+}
+
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.mainBox {
+    background-color: #cdd4b9;
+    border-radius: 10px;
+    font-family: "VT323";
+    padding: 20px;
+    width: calc(var(--scale)*300px);
+    height: calc(var(--scale)*300px);
+    box-shadow: inset 0px 0px 10px #757969;
+    user-select: none;
+
+}
+
+.screen {
+    background-color: #2d3031;
+    border-radius: 10px;
+    color: #4AF626;
+    height: 10%;
+    padding: 20px;
+    box-shadow: inset 0px 0px 10px #96c49e;
+    display: flex;
+    justify-content: right;
+    font-size: 35px;
+    overflow: hidden;
+    
+    
+    
+}
+
+.squaresContainer{
+    width: 83.333%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    align-content: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    color: black;
+    margin: 10px;
+    height: 70%;
+    font-family: "VT323";
+    
+}
+
+#numberButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    color: black;
+    margin: 0px;
+    height: 100%;
+    width: 70%;
+    font-family: "VT323";
+}
+
+#operatorButtons {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 20%;
+    margin-left: 10px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    border: 3px solid #AAAAAA;
+    box-Shadow: 0px 0px 5px #444444;
+}
+
+.operator{
+    height: 100%;
+    width: auto;
+    margin: 2px;
+}
+
+
+
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes spread {
+    from { width: 0px; }
+    to { width: auto; }
+}
+
+
