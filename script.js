@@ -1,8 +1,7 @@
 //Variables
 numArray = [1,2,3,4,5,6,7,8,9,0]
 operatorsArray = ["+","-","x","%","EXE","CLR"]
-numberButtons = createButtons(numArray,"numberButtons","number");
-operatorButtons = createButtons(operatorsArray,"operatorButtons","operator");
+
 var stack = []
 var currentInput =[]
 var currentButtonClicked = ""
@@ -12,8 +11,9 @@ var operator;
 const screen = document.querySelector(".screen")
 
 
-
-
+//create the objects and html for all buttons
+numberButtons = createButtons(numArray,"numberButtons","number");
+operatorButtons = createButtons(operatorsArray,"operatorButtons","operator");
     
     
 //following functions return width/height based on width/height of container and number of items to fit in width/height in the container 
@@ -29,6 +29,7 @@ function getHeight(container,numItems) {
     return objectHeight;
 }
 
+//adds user input to calculation stack, then launches calculation once EXE is pressed
 function addToStack(input){
 
     if(!isNaN(input)) {
@@ -65,6 +66,7 @@ function addToStack(input){
     
 }
 
+
 function isCalculatable(array) {
     var evens = 0 
     var odds = 0
@@ -85,8 +87,8 @@ function isCalculatable(array) {
 
 function calculate(array){
     var bufferArray = []
-    console.log((array.length-1)/2)
-    for(i = 0 ; i <= (array.length - 1) / 2; i++){
+    iterations = (array.length - 1) / 2
+    for(i = 0 ; i < iterations; i++){
        console.log(i);
        bufferArray[0] =  operations(array[0],array[2],array[1]);
        console.log(bufferArray);
